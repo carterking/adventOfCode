@@ -206,8 +206,9 @@ function sumOfNumbers(arr) {
     let answer = [];
     for (let i = 0; i < len; i++) {
         for (let j = 1; j < len - 1; j++) {
-            if (arr[i] + arr[j] === 2020) {
-                answer = [arr[i], arr[j]];
+            for (let k = 2; k < len - 2; k++)
+            if (arr[i] + arr[j] + arr[k] === 2020) {
+                answer = [arr[i], arr[j], arr[k]];
                 break;
             }
             
