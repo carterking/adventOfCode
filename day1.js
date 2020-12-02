@@ -207,9 +207,10 @@ function sumOfNumbers(arr) {
     for (let i = 0; i < len; i++) {
         for (let j = 1; j < len - 1; j++) {
             if (arr[i] + arr[j] === 2020) {
+                answer = [arr[i], arr[j]];
                 break;
             }
-            answer = [arr[i], arr[j]];
+            
         }
     }
     console.log(answer);
