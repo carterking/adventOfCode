@@ -201,13 +201,16 @@ const numbers = [
   1096,
 ];
 
+//let sortedNumbers = numbers.sort(function(a, b) {return b - a});
+
 function sumOfNumbers(arr) {
     let len = arr.length;
     let answer = [];
-    for (let i = 0; i < len; i++) {
-        for (let j = 1; j < len - 1; j++) {
-            for (let k = 2; k < len - 2; k++)
-            if (arr[i] + arr[j] + arr[k] === 2020) {
+    let targetSum = 4869;
+    for (let i = 0; i < len - 2; i++) {
+        for (let j = i + 1; j < len - 1; j++) {
+            for (let k = j + 1; k < len; k++)
+            if (arr[i] + arr[j] + arr[k] === targetSum) {
                 answer = [arr[i], arr[j], arr[k]];
                 break;
             }
